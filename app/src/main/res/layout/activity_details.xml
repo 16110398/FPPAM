@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="id.devloved.metube.DetailsActivity">
+    tools:context="com.listyawan.mytube.DetailsActivity">
 
 
     <LinearLayout
@@ -106,7 +106,9 @@
         <android.support.v7.widget.RecyclerView
             android:id="@+id/mList_videos"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+            android:layout_height="match_parent">
+
+        </android.support.v7.widget.RecyclerView>
     </LinearLayout>
 
 </RelativeLayout>
