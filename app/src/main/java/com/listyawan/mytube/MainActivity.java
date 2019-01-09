@@ -1,6 +1,8 @@
 package com.listyawan.mytube;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
@@ -66,9 +68,15 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
-        int id=item.getItemId();
-        if (id==R.id.version){
-            Toast.makeText(this,"Version 1.0",Toast.LENGTH_LONG).show();
+        switch (item.getItemId()){
+            case R.id.setting:
+                Intent intent = new Intent(Settings.ACTION_LOCALE_SETTINGS);
+                startActivity(intent);
+
+                break;
+            case R.id.version:
+                Toast.makeText(this, "Version 1.0", Toast.LENGTH_LONG).show();
+                break;
         }
 
         return super.onOptionsItemSelected(item);

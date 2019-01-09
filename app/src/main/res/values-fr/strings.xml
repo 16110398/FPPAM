@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name = "app_name"> Mon tube </string>
+    <string name = "title_channel"> Canal </string>
+    <string name = "title_playlist"> Liste de lecture </string>
+    <string name = "title_setting"> Réglage </string>
+    <string name = "title_version"> Version </string>
+</resources>
