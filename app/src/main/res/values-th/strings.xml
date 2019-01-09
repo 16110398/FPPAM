@@ -8,4 +8,7 @@
     <string name = "title_version"> เวอร์ชัน </string>
     <string name="des">ลักษณะ :</string>
     <string name="comment">ความคิดเห็น :</string>
+
+    <string name="delete">ลบ</string>
+    <string name="save">บันทึก</string>
 </resources>

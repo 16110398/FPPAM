@@ -8,4 +8,7 @@
     <string name = "title_version"> Version </string>
     <string name="des">La description :</string>
     <string name="comment">commentaires :</string>
+
+    <string name="delete">Effacer</string>
+    <string name="save">Sauvegarder</string>
 </resources>

@@ -23,7 +23,7 @@
         android:layout_marginLeft="73dp"
         android:layout_marginStart="73dp"
         android:layout_marginTop="37dp"
-        android:text="Delete" />
+        android:text="@string/delete" />
 
     <Button
         android:id="@+id/btnSave"
@@ -34,6 +34,6 @@
         android:layout_marginStart="46dp"
         android:layout_toEndOf="@+id/btnDelete"
         android:layout_toRightOf="@+id/btnDelete"
-        android:text="Save" />
+        android:text="@string/save" />
 
 </RelativeLayout>
