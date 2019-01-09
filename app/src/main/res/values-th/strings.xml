@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name = "app_name"> My Tube </string>
+    <string name = "title_channel"> ช่อง </string>
+    <string name = "title_playlist"> เพลย์ลิสต์ </string>
+    <string name = "title_setting"> การตั้งค่า </string>
+    <string name = "title_version"> เวอร์ชัน </string>
+</resources>
