@@ -6,4 +6,6 @@
     <string name = "title_setting"> การตั้งค่า </string>
     <string name = "title_favorite"> ที่ชื่นชอบ </string>
     <string name = "title_version"> เวอร์ชัน </string>
+    <string name="des">ลักษณะ :</string>
+    <string name="comment">ความคิดเห็น :</string>
 </resources>

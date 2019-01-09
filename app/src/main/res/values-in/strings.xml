@@ -6,4 +6,6 @@
     <string name = "title_setting"> Pengaturan </string>
     <string name = "title_favorite"> Kesukaan </string>
     <string name = "title_version"> Versi </string>
+    <string name="des">Deskripsi :</string>
+    <string name="comment">Komentar :</string>
 </resources>

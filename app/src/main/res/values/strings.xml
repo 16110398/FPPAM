@@ -6,4 +6,6 @@
     <string name="title_setting">Setting</string>
     <string name="title_favorite">Favorite</string>
     <string name="title_version">Version</string>
+    <string name="des">Description :</string>
+    <string name="comment">Comments :</string>
 </resources>
