@@ -4,5 +4,6 @@
     <string name = "title_channel"> Saluran </string>
     <string name = "title_playlist"> Daftar Putar </string>
     <string name = "title_setting"> Pengaturan </string>
+    <string name = "title_favorite"> Kesukaan </string>
     <string name = "title_version"> Versi </string>
 </resources>

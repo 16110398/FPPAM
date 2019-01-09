@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
                 }else if (id==R.id.navigation_playlist){
                     setFragment(playlistFragment);
                     return true;
-                }else if (id==R.id.navigation_setting){
+                }else if (id==R.id.navigation_favorite){
                     setFragment(settingFragment);
                     return true;
                 }

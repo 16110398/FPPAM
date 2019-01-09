@@ -12,9 +12,9 @@
         android:title="@string/title_playlist" />
 
     <item
-        android:id="@+id/navigation_setting"
+        android:id="@+id/navigation_favorite"
         android:icon="@drawable/ic_settings_black_24dp"
-        android:title="@string/title_setting" />
+        android:title="@string/title_favorite" />
 
 
 </menu>

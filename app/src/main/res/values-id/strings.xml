@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name = "app_name"> My Tube </string>
-    <string name = "title_channel"> Saluran </string>
-    <string name = "title_playlist"> Daftar Putar </string>
-    <string name = "title_setting"> Pengaturan </string>
-    <string name = "title_version"> Versi </string>
-</resources>

@@ -4,5 +4,6 @@
     <string name="title_channel">Channel</string>
     <string name="title_playlist">Playlist</string>
     <string name="title_setting">Setting</string>
+    <string name="title_favorite">Favorite</string>
     <string name="title_version">Version</string>
 </resources>
