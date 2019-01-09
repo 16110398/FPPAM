@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "693848944634",
+    "firebase_url": "https://fppam-8c8df.firebaseio.com",
+    "project_id": "fppam-8c8df",
+    "storage_bucket": "fppam-8c8df.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:693848944634:android:480b84b301c29d10",
+        "android_client_info": {
+          "package_name": "com.listyawan.mytube"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "693848944634-pae0i9nnct0jqfgsa7u3l1qm4n01h4j1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.listyawan.mytube",
+            "certificate_hash": "b642c287d8a1dda211e5d6fef64bfa00015f7a08"
+          }
+        },
+        {
+          "client_id": "693848944634-16amhc71lgr0k9h9fqq4k434npn4garj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDhZgQCiO-KQPPVZMTdqFMWMbdPbqlkjvI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "693848944634-16amhc71lgr0k9h9fqq4k434npn4garj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
