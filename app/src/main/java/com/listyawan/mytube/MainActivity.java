@@ -13,8 +13,8 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.listyawan.mytube.fragments.ChannelFragment;
+import com.listyawan.mytube.fragments.FavoriteFragment;
 import com.listyawan.mytube.fragments.PlaylistFragment;
-import com.listyawan.mytube.fragments.SettingFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
         final ChannelFragment channelFragment = new ChannelFragment();
         final PlaylistFragment playlistFragment = new PlaylistFragment();
-        final SettingFragment settingFragment = new SettingFragment();
+        final FavoriteFragment favoriteFragment = new FavoriteFragment();
 
         navigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
                     setFragment(playlistFragment);
                     return true;
                 }else if (id==R.id.navigation_favorite){
-                    setFragment(settingFragment);
+                    setFragment(favoriteFragment);
                     return true;
                 }
                 return false;

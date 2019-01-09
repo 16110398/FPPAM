@@ -71,7 +71,7 @@
                 android:id="@+id/btnFav"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
-                android:onClick="share_btn_pressed"
+                android:onClick="favVideo"
                 android:scaleType="fitCenter"
                 android:src="@drawable/ic_favorite_border_black_24dp"
                 android:visibility="visible"

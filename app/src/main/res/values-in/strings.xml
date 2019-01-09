@@ -11,4 +11,7 @@
 
     <string name="default_notification_channel_id">MyTube Notifikasi</string>
     <string name="default_notification_channel_name">Berita</string>
+
+    <string name="delete">Hapus</string>
+    <string name="save">Simpan</string>
 </resources>

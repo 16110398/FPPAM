@@ -3,13 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.listyawan.mytube.fragments.SettingFragment">
+    tools:context="com.listyawan.mytube.fragments.FavoriteFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:id="@+id/textView"
+    <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Favorite Fragment" />
+        android:id="@+id/listview"></ListView>
 
 </FrameLayout>

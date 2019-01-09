@@ -54,10 +54,14 @@ import java.util.ArrayList;
 import at.huber.youtubeExtractor.YouTubeUriExtractor;
 import at.huber.youtubeExtractor.YtFile;
 import com.listyawan.mytube.adapters.CommentAdapter;
+import com.listyawan.mytube.db.DatabaseHelper;
+import com.listyawan.mytube.fragments.FavoriteFragment;
 import com.listyawan.mytube.models.YoutubeCommentModel;
 import com.listyawan.mytube.models.YoutubeDataModel;
 
 public class DetailsActivity  extends YouTubeBaseActivity implements YouTubePlayer.OnInitializedListener  {
+
+    DatabaseHelper databaseHelper;
 
     private static final int READ_STORAGE_PERMISSION_REQUEST_CODE = 1;
     private static String GOOGLE_YOUTUBE_API = "AIzaSyAOq6K4u-Lw4hOM7VN-YJGU9jozb12ahMk";
@@ -81,6 +85,8 @@ public class DetailsActivity  extends YouTubeBaseActivity implements YouTubePlay
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_details);
+
+        databaseHelper = new DatabaseHelper(this);
 
         youtubeDataModel = getIntent().getParcelableExtra(YoutubeDataModel.class.toString());
         Log.e("", youtubeDataModel.getDescription());
@@ -187,6 +193,22 @@ public class DetailsActivity  extends YouTubeBaseActivity implements YouTubePlay
         }
     };
 
+
+    public void favVideo(View view) {
+
+        String newEntry = youtubeDataModel.getTitle();
+
+        if (newEntry.length() !=0){
+            boolean insertData = databaseHelper.addData(newEntry);
+
+            if (insertData){
+                Toast.makeText(this,youtubeDataModel.getTitle() +" telah masuk ke daftar favorite",Toast.LENGTH_LONG).show();
+            }else {
+                Toast.makeText(this,"Ulangi, ada kesalahan",Toast.LENGTH_LONG).show();
+            }
+        }
+
+    }
 
 
     public void share_btn_pressed(View view) {
