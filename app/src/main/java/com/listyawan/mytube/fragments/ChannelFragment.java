@@ -36,9 +36,9 @@ import com.listyawan.mytube.models.YoutubeDataModel;
 
 public class ChannelFragment extends Fragment {
 
-    private static String GOOGLE_YOUTUBE_API_KEY = "AIzaSyAdDix7i7a3an-gyXiquTV_14cIsr8-DZg";//here you should use your api key for testing purpose you can use this api also
-    private static String CHANNEL_ID = "UCoMdktPbSTixAyNGwb-UYkQ"; //here you should use your channel id for testing purpose you can use this api also
-    private static String CHANNLE_GET_URL = "https://www.googleapis.com/youtube/v3/search?part=snippet&order=date&channelId=" + CHANNEL_ID + "&maxResults=20&key=" + GOOGLE_YOUTUBE_API_KEY + "";
+    private static String GOOGLE_YOUTUBE_API_KEY = "AIzaSyAOq6K4u-Lw4hOM7VN-YJGU9jozb12ahMk";//google console api
+    private static String CHANNEL_ID = "UCNmlGnl3pTGQ5rAm8GQyDaw"; //channel id
+    private static String CHANNLE_GET_URL = "https://www.googleapis.com/youtube/v3/search?part=snippet&order=date&channelId=" + CHANNEL_ID + "&maxResults=50&key=" + GOOGLE_YOUTUBE_API_KEY + "";
 
 
     private RecyclerView mList_videos = null;

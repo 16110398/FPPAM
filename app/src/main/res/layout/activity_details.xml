@@ -4,28 +4,50 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#f7f7f7"
     tools:context="com.listyawan.mytube.DetailsActivity">
 
+    <com.google.android.youtube.player.YouTubePlayerView
+        android:id="@+id/youtubePlayer"
+        android:layout_width="match_parent"
+        android:layout_height="170dp">
 
+    </com.google.android.youtube.player.YouTubePlayerView>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:scrollIndicators="none"
+        android:layout_below="@+id/youtubePlayer">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="130dp"
         android:id="@+id/title_layout"
-        android:background="#e4e4e4"
-        android:orientation="vertical">
+        android:layout_below="@+id/youtubePlayer"
+        android:background="#fff"
+        android:layout_margin="5dp"
+        android:orientation="vertical"
+        android:weightSum="1">
 
         <TextView
             android:id="@+id/textViewName"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:layout_marginBottom="5dp"
-            android:maxLines="2"
-            android:text="Android Name sjdnjas ajsk djak sjdka kaskdjaksdj kjskdjaksj"
+            android:maxLines="4"
+            android:text="Title"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="@color/colorPrimary"
-            android:textSize="20dp" />
+            android:textSize="16dp"
+            android:layout_weight="0.17" />
 
         <TextView
             android:id="@+id/textViewDate"
@@ -35,72 +57,114 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:maxLines="1"
-            android:textColor="@color/colorAccent"
-            android:text="Android Name sjdnjas ajskdjaksjdka kaskdjaksdj kjskdjaksj"
+            android:textColor="#444"
+            android:text="Date"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textSize="16dp" />
+            android:textSize="10dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <ImageView
+                android:id="@+id/btnFav"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:onClick="share_btn_pressed"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_favorite_border_black_24dp"
+                android:visibility="visible"
+                android:layout_marginRight="33dp"
+                android:layout_marginEnd="33dp"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@+id/btnDownload"
+                android:layout_toStartOf="@+id/btnDownload" />
+
+            <ImageView
+                android:id="@+id/btnDownload"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:onClick="downloadVideo"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_file_download_black_24dp"
+                android:visibility="visible"
+                android:layout_marginRight="32dp"
+                android:layout_marginEnd="32dp"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@+id/btnShare"
+                android:layout_toStartOf="@+id/btnShare" />
+
+            <ImageView
+                android:id="@+id/btnShare"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:onClick="share_btn_pressed"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_share_black_24dp"
+                android:visibility="visible"
+                android:layout_marginRight="14dp"
+                android:layout_marginEnd="14dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/desc"
+        android:layout_below="@+id/title_layout"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="#fff">
 
         <TextView
-            android:layout_width="150dp"
-            android:layout_height="30dp"
-            android:text="Download This Video"
-            android:gravity="center"
-            android:onClick="downloadVideo"
+            android:id="@+id/desctitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Description :"
+            android:textAllCaps="false"
+            android:layout_margin="5dp"
             android:textColor="@color/colorPrimary"
-            android:layout_marginLeft="1dp"
-            android:layout_marginTop="5dp"/>
-    </LinearLayout>
-    <!--real image size is 40x50px-->
-    <ImageView
-        android:id="@+id/img_left_header"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="20dp"
-        android:onClick="share_btn_pressed"
-        android:scaleType="fitCenter"
-        android:layout_below="@+id/youtube_player"
-        android:src="@drawable/ic_share_black_24dp"
-        android:visibility="visible" />
+            />
 
-    <TextView
-        android:layout_below="@+id/title_layout"
-        android:id="@+id/textViewDes"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="left"
-        android:layout_margin="10dp"
-        android:maxLines="4"
-        android:text="Android Name sjdnjas ajskdjaksjdka kaskdjaksdj kjskdjaksjAndroid Name sjdnjas ajskdjaksjdka kaskdjaksdj kjskdjaksjAndroid Name sjdnjas ajskdjaksjdka kaskdjaksdj kjskdjaksjAndroid Name sjdnjas ajskdjaksjdka kaskdjaksdj kjskdjaksjAndroid Name sjdnjas ajskdjaksjdka kaskdjaksdj kjskdjaksj"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="@color/colorAccent"
-        android:textSize="16dp" />
+        <TextView
+            android:layout_below="@id/desctitle"
+            android:id="@+id/textViewDes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_margin="5dp"
+            android:maxLines="7"
+            android:text="Description"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#444"
+            android:textSize="14dp" />
+    </RelativeLayout>
 
     <LinearLayout
-        android:layout_below="@+id/textViewDes"
+        android:layout_below="@+id/desc"
         android:layout_width="match_parent"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="10dp"
-
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:background="#fff"
         android:orientation="vertical"
         android:layout_height="wrap_content">
 
-        <TextView
-            android:visibility="gone"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="FAVOURITE"
-            android:textColor="@color/colorAccent"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="COMMENTS"
-            android:layout_marginLeft="0dp"
-            android:layout_marginBottom="10dp"
+            android:text="Comments :"
+            android:textAllCaps="false"
+            android:layout_margin="@android:                          5dp"
             android:textColor="@color/colorPrimary"/>
 
         <android.support.v7.widget.RecyclerView
@@ -110,5 +174,8 @@
 
         </android.support.v7.widget.RecyclerView>
     </LinearLayout>
+    </LinearLayout>
+
+    </ScrollView>
 
 </RelativeLayout>

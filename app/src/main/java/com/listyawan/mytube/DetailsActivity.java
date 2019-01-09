@@ -22,7 +22,9 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.util.SparseArray;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.youtube.player.YouTubeBaseActivity;
 import com.google.android.youtube.player.YouTubeInitializationResult;
@@ -55,20 +57,25 @@ import com.listyawan.mytube.adapters.CommentAdapter;
 import com.listyawan.mytube.models.YoutubeCommentModel;
 import com.listyawan.mytube.models.YoutubeDataModel;
 
-public class DetailsActivity extends AppCompatActivity implements YouTubePlayer.OnInitializedListener {
+public class DetailsActivity  extends YouTubeBaseActivity implements YouTubePlayer.OnInitializedListener  {
 
     private static final int READ_STORAGE_PERMISSION_REQUEST_CODE = 1;
-    private static String GOOGLE_YOUTUBE_API = "AIzaSyBH8szUCt1ctKQabVeQuvWgowaKxHVjn8E";
+    private static String GOOGLE_YOUTUBE_API = "AIzaSyAOq6K4u-Lw4hOM7VN-YJGU9jozb12ahMk";
     private YoutubeDataModel youtubeDataModel = null;
+
     TextView textViewName;
     TextView textViewDes;
     TextView textViewDate;
     // ImageView imageViewIcon;
     public static final String VIDEO_ID = "c2UNv38V6y4";
 
+    private YouTubePlayerView mYoutubePlayerView = null;
+    private YouTubePlayer mYoutubePlayer = null;
+
     private ArrayList<YoutubeCommentModel> mListData = new ArrayList<>();
     private CommentAdapter mAdapter = null;
     private RecyclerView mList_videos = null;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,7 +84,6 @@ public class DetailsActivity extends AppCompatActivity implements YouTubePlayer.
 
         youtubeDataModel = getIntent().getParcelableExtra(YoutubeDataModel.class.toString());
         Log.e("", youtubeDataModel.getDescription());
-
 
 
         textViewName = (TextView) findViewById(R.id.textViewName);
@@ -98,45 +104,31 @@ public class DetailsActivity extends AppCompatActivity implements YouTubePlayer.
                 e.printStackTrace();
             }
         }
+
+        YouTubePlayerView youTubePlayerView = (YouTubePlayerView) findViewById(R.id.youtubePlayer);
+        youTubePlayerView.initialize(GOOGLE_YOUTUBE_API,this);
     }
 
     @Override
-    public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean wasRestored) {
+    public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean b) {
+
         youTubePlayer.setPlayerStateChangeListener(playerStateChangeListener);
         youTubePlayer.setPlaybackEventListener(playbackEventListener);
-        if (!wasRestored) {
+
+        if (!b){
             youTubePlayer.cueVideo(youtubeDataModel.getVideo_id());
         }
+
     }
 
-    private YouTubePlayer.PlaybackEventListener playbackEventListener = new YouTubePlayer.PlaybackEventListener() {
-        @Override
-        public void onPlaying() {
+    @Override
+    public void onInitializationFailure(YouTubePlayer.Provider provider, YouTubeInitializationResult youTubeInitializationResult) {
 
-        }
 
-        @Override
-        public void onPaused() {
 
-        }
+    }
 
-        @Override
-        public void onStopped() {
-
-        }
-
-        @Override
-        public void onBuffering(boolean b) {
-
-        }
-
-        @Override
-        public void onSeekTo(int i) {
-
-        }
-    };
-
-    private YouTubePlayer.PlayerStateChangeListener playerStateChangeListener = new YouTubePlayer.PlayerStateChangeListener() {
+    private YouTubePlayer.PlayerStateChangeListener playerStateChangeListener=new YouTubePlayer.PlayerStateChangeListener() {
         @Override
         public void onLoading() {
 
@@ -168,10 +160,34 @@ public class DetailsActivity extends AppCompatActivity implements YouTubePlayer.
         }
     };
 
-    @Override
-    public void onInitializationFailure(YouTubePlayer.Provider provider, YouTubeInitializationResult youTubeInitializationResult) {
+    private YouTubePlayer.PlaybackEventListener playbackEventListener = new YouTubePlayer.PlaybackEventListener() {
+        @Override
+        public void onPlaying() {
 
-    }
+        }
+
+        @Override
+        public void onPaused() {
+
+        }
+
+        @Override
+        public void onStopped() {
+
+        }
+
+        @Override
+        public void onBuffering(boolean b) {
+
+        }
+
+        @Override
+        public void onSeekTo(int i) {
+
+        }
+    };
+
+
 
     public void share_btn_pressed(View view) {
         Intent sendIntent = new Intent();
@@ -193,7 +209,7 @@ public class DetailsActivity extends AppCompatActivity implements YouTubePlayer.
             @Override
             public void onUrisAvailable(String videoID, String videoTitle, SparseArray<YtFile> ytFiles) {
                 if (ytFiles != null) {
-                    int itag = 22;
+                    int itag = 18;
                     //This is the download URL
                     String downloadURL = ytFiles.get(itag).getUrl();
                     Log.e("download URL :", downloadURL);
@@ -300,6 +316,8 @@ public class DetailsActivity extends AppCompatActivity implements YouTubePlayer.
             super.onPostExecute(s);
             if (pDialog.isShowing())
                 pDialog.dismiss();
+                Toast.makeText(getApplicationContext(),"File "+youtubeDataModel.getTitle()+" berhasil di download ",Toast.LENGTH_LONG).show();
+
         }
     }
 
