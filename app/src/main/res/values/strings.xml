@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">My Tube</string>
+    <string name="app_name">MyTube</string>
     <string name="title_channel">Channel</string>
     <string name="title_playlist">Playlist</string>
     <string name="title_setting">Setting</string>
@@ -8,4 +8,7 @@
     <string name="title_version">Version</string>
     <string name="des">Description :</string>
     <string name="comment">Comments :</string>
+
+    <string name="default_notification_channel_id">MyTube Notification</string>
+    <string name="default_notification_channel_name">News</string>
 </resources>

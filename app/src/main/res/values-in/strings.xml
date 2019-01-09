@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name = "app_name"> My Tube </string>
+    <string name = "app_name"> MyTube </string>
     <string name = "title_channel"> Saluran </string>
     <string name = "title_playlist"> Daftar Putar </string>
     <string name = "title_setting"> Pengaturan </string>
@@ -8,4 +8,7 @@
     <string name = "title_version"> Versi </string>
     <string name="des">Deskripsi :</string>
     <string name="comment">Komentar :</string>
+
+    <string name="default_notification_channel_id">MyTube Notifikasi</string>
+    <string name="default_notification_channel_name">Berita</string>
 </resources>
