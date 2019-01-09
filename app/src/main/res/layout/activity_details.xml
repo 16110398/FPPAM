@@ -164,7 +164,13 @@
             android:layout_height="wrap_content"
             android:text="Comments :"
             android:textAllCaps="false"
+<<<<<<< HEAD
             android:layout_margin="5dp"
+=======
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+>>>>>>> be90acf9ce0a6f494044b71aed5b7104e403d12b
             android:textColor="@color/colorPrimary"/>
 
         <android.support.v7.widget.RecyclerView
